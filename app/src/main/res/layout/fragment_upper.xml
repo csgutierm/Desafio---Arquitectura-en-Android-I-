@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".UpperFragment">
+    tools:context=".UpperFragment"
+    android:id="@+id/tv_fragment_upper">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_click_upper"

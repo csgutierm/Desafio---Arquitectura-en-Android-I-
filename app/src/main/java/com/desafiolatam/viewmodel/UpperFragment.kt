@@ -32,7 +32,7 @@ class UpperFragment : Fragment() {
             }
         }
 
-        binding.tvContadorUpper.setOnClickListener {
+        binding.tvFragmentUpper.setOnClickListener {
             viewModel.increaseUpper()
         }
     }

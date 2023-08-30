@@ -34,7 +34,7 @@ class LowerFragment : Fragment() {
             }
         }
 
-        binding.tvContadorLower.setOnClickListener {
+        binding.tvFragmentLower.setOnClickListener {
             viewModel.increaseLower()
         }
     }
