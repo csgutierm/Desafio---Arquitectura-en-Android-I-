@@ -1,5 +1,6 @@
 package com.desafiolatam.viewmodel
 
+import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -23,5 +24,27 @@ class MainViewModel : ViewModel() {
         counterLowerMutableStateFlow.value -= 1
     }
 
+    private var winnerMessageDisplayed = false
+    private var winnerDetected = false
+
+    fun checkForWinner(): Boolean {
+        return counterLowerMutableStateFlow.value >= 20 || counterUpperMutableStateFlow.value >= 20
+    }
+
+    fun hasWinnerMessageDisplayed(): Boolean {
+        return winnerMessageDisplayed
+    }
+
+    fun setWinnerMessageDisplayed(displayed: Boolean) {
+        winnerMessageDisplayed = displayed
+    }
+
+    fun hasWinnerDetected(): Boolean {
+        return winnerDetected
+    }
+
+    fun setWinnerDetected(detected: Boolean) {
+        winnerDetected = detected
+    }
 
 }
